@@ -6,10 +6,10 @@ class Shirt
   attr_reader :input_color, :input_size, :input_price
   attr_writer :input_color, :input_size
 
-  def initialize(input_color, input_size, input_price)
-    @input_color = input_color
-    @input_size = input_size
-    @input_price = input_color
+  def initialize(input_options)
+    @input_color = input_options[:input_color]
+    @input_size = input_options[:input_size]
+    @input_price = input_options[:input_price]
   end
 
 # Getter Methods
@@ -28,7 +28,7 @@ class Shirt
 
 end
 
-shirt1 = Shirt.new("red", "medium", 25)
+shirt1 = Shirt.new(input_color: "red", input_size: "large", input_price: 30)
 p shirt1.input_color 
 p shirt1.input_size
 p shirt1.input_price
