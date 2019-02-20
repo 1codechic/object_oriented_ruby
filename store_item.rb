@@ -3,31 +3,32 @@
 # shoes = {:color => "white", :price => 89.99, :size => 8}
 
 class Shirt
+  attr_reader :input_color, :input_size, :input_price
   def initialize(input_color, input_size, input_price)
     @input_color = input_color
     @input_size = input_size
-    @input_price = input_price
+    @input_price = input_color
   end
 
 # Getter Methods
-  def color
-    @input_color
-  end
+  # def color
+  #   @input_color
+  # end
 
-  def size
-    @input_size
-  end
+  # def size
+  #   @input_size
+  # end
 
-  def price
-    @input_price
-  end
+  # def price
+  #   @input_price
+  # end
 
 
 end
 
 shirt1 = Shirt.new("red", "medium", 25)
-p shirt1.color 
-p shirt1.size
-p shirt1.price
+p shirt1.input_color 
+p shirt1.input_size
+p shirt1.input_price
 
 
