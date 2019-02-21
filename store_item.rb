@@ -10,8 +10,17 @@ class Shirt
     @input_color = input_options[:input_color]
     @input_size = input_options[:input_size]
     @input_price = input_options[:input_price]
+  end  
+end
+
+class Pant < Shirt
+  attr_reader :input_pant_type
+  def initialize(input_options)
+    @input_pant_type= input_options[:input_pant_type]
   end
 end
+
+
 
 shirt1 = Shirt.new(
   input_color: "red", 
@@ -25,4 +34,9 @@ p shirt1.input_price
 p shirt1.input_color = "blue"
 p shirt1.input_size = "small"
 p shirt1.input_price = 24.95
+
+pant1 = Pant.new(
+  input_pant_type: "long")
+
+p pant1
 

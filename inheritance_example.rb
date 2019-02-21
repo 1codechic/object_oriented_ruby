@@ -1,4 +1,4 @@
-class Transportation
+module Transportationable
   def initialize
     @speed = 0
     @direction = 'north'
@@ -18,15 +18,15 @@ class Transportation
 end
 
 
-class Car < Transportation
-
+class Car
+  include Transportationable
   def honk_horn
     puts "Beeeeeeep!"
   end
 end
 
-class Bike < Transportation
-  
+class Bike
+  include Transportationable
   def ring_bell
     puts "Ring ring!"
   end
